@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description"
+    content="Wedding website for Emma Bouy & Jeremiah Brown. Details, schedule, travel info, and RSVP." />
+  <title>Emma Bouy & Jeremiah Brown — Wedding</title>
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <!-- Top nav -->
+  <header class="header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand__mark">❤</span>
+        <span class="brand__text">Emma Bouy & Jeremiah Brown</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+        <span class="sr-only">Toggle menu</span>
+        <span class="nav__bar"></span>
+        <span class="nav__bar"></span>
+        <span class="nav__bar"></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <a href="#meet-us">Meet Us</a>
+        <a href="#details">Details</a>
+        <a href="#travel">Travel</a>
+        <a href="#registry">Registry</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn--small" href="#rsvp">RSVP</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="hero__overlay"></div>
+      <canvas class="hero__leaves" id="leavesCanvas" aria-hidden="true"></canvas>
+      <div class="container hero__content">
+        <p class="eyebrow">We’re getting married!</p>
+        <h1 class="hero__title">Emma Bouy & Jeremiah Brown</h1>
+        <p class="hero__subtitle">
+          <span id="weddingDateText">Saturday, April 3, 2027</span> · <span>New Orleans, LA</span>
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn" href="#rsvp">RSVP</a>
+          <a class="btn btn--ghost" href="#details">View Details</a>
+        </div>
+
+        <div class="countdown" aria-label="Countdown to wedding">
+          <div class="countdown__item">
+            <div class="countdown__num" id="cdDays">--</div>
+            <div class="countdown__label">Days</div>
+          </div>
+          <div class="countdown__item">
+            <div class="countdown__num" id="cdHours">--</div>
+            <div class="countdown__label">Hours</div>
+          </div>
+          <div class="countdown__item">
+            <div class="countdown__num" id="cdMins">--</div>
+            <div class="countdown__label">Minutes</div>
+          </div>
+          <div class="countdown__item">
+            <div class="countdown__num" id="cdSecs">--</div>
+            <div class="countdown__label">Seconds</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet the Bride & Groom -->
+    <section class="section" id="meet-us">
+      <div class="container">
+        <div class="section__header">
+          <h2>Meet the Bride & Groom</h2>
+          <p class="muted">The people at the heart of it all</p>
+        </div>
+
+        <div class="about-couple">
+          <div class="about-person">
+            <img src="assets/emma.jpg" alt="Photo of the bride" class="about-person__image">
+            <h2>THE BRIDE</h2>
+            <div class="about-person__name">Emma Elizabeth Bouy</div>
+          </div>
+
+          <div class="about-person">
+            <img src="assets/jeremiah.jpg" alt="Photo of the groom" class="about-person__image">
+            <h2>THE GROOM</h2>
+            <div class="about-person__name">Jeremiah Wayne Brown</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wedding Party -->
+    <section class="section section--alt" id="wedding-party">
+      <div class="container">
+        <div class="section__header">
+          <h2>Wedding Party</h2>
+          <p class="muted">The people standing by our side</p>
+        </div>
+
+        <div class="party-grid">
+          <div class="party-member card">
+            <img src="assets/emily.jpg" alt="Photo of Emily Johnson" class="party-member__image">
+            <h3 class="party-member__name">Emily Johnson</h3>
+            <p class="party-member__role muted">Maid of Honor · Best Friend of the Bride</p>
+          </div>
+
+          <div class="party-member card">
+            <img src="assets/olivia.jpg" alt="Photo of Olivia Bouy" class="party-member__image">
+            <h3 class="party-member__name">Olivia Bouy</h3>
+            <p class="party-member__role muted">Bridesmaid · Sister of the Bride</p>
+          </div>
+
+          <div class="party-member card">
+            <img src="assets/hannah.jpg" alt="Photo of Hannah Craft" class="party-member__image">
+            <h3 class="party-member__name">Hannah Craft</h3>
+            <p class="party-member__role muted">Bridesmaid · Friend of the Bride</p>
+          </div>
+
+          <div class="party-member card">
+            <img src="assets/massie.jpg" alt="Photo of Massiel Martinez" class="party-member__image">
+            <h3 class="party-member__name">Massiel Martinez</h3>
+            <p class="party-member__role muted">Bridesmaid · Cousin of the Bride</p>
+          </div>
+
+          <div class="party-member card">
+            <img src="assets/luke.jpg" alt="Photo of Stephen Luke Smith" class="party-member__image">
+            <h3 class="party-member__name">Stephen "Luke" Smith</h3>
+            <p class="party-member__role muted">Best Man · Best Friend of the Groom</p>
+          </div>
+
+          <div class="party-member card">
+            <img src="assets/gavin.jpg" alt="Photo of Gavin Kelly" class="party-member__image">
+            <h3 class="party-member__name">Gavin Kelly</h3>
+            <p class="party-member__role muted">Groomsman · Friend of the Groom</p>
+          </div>
+
+          <div class="party-member card">
+            <img src="assets/justin.jpg" alt="Photo of Justin Stephenson" class="party-member__image">
+            <h3 class="party-member__name">Justin Stephenson</h3>
+            <p class="party-member__role muted">Groomsman · Friend of the Groom</p>
+          </div>
+
+          <div class="party-member card">
+            <img src="assets/victor.jpg" alt="Photo of Victor Bouy" class="party-member__image">
+            <h3 class="party-member__name">Victor Bouy</h3>
+            <p class="party-member__role muted">Groomsman · Brother of the Bride</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Roles -->
+    <section class="section" id="special-roles">
+      <div class="container">
+        <div class="section__header">
+          <h2>Special Roles</h2>
+          <p class="muted">Our littlest VIPs</p>
+        </div>
+
+        <div class="special-grid">
+          <div class="special-member">
+            <div class="special-icon">🌸</div>
+            <div class="special-member__text">
+              <div class="special-member__name">Sylphrenna "Frennie" Upchurch</div>
+              <div class="special-member__role">Flower Girl</div>
+            </div>
+          </div>
+
+          <div class="special-member">
+            <div class="special-icon">💍</div>
+            <div class="special-member__text">
+              <div class="special-member__name">Tyler "Chunky" Simoneaux</div>
+              <div class="special-member__role">Ring Bearer</div>
+            </div>
+          </div>
+
+          <div class="special-member">
+            <div class="special-icon">💍</div>
+            <div class="special-member__text">
+              <div class="special-member__name">Zachary Simoneaux</div>
+              <div class="special-member__role">Ring Bearer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Details -->
+    <section class="section section--alt" id="details">
+      <div class="container">
+        <div class="section__header">
+          <h2>Wedding Details</h2>
+          <p class="muted">Everything you need in one place.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Ceremony and Reception</h3>
+            <p><strong>Time:</strong> TBA</p>
+            <p><strong>Location:</strong> New Orleans</p>
+          </article>
+
+          <article class="card">
+            <h3>Dress & Notes</h3>
+            <p><strong>Attire:</strong> Semi-formal (No jeans, no baseball caps)</p>
+            <p><strong>Adults only?</strong> No</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travel -->
+    <section class="section" id="travel">
+      <div class="container">
+        <div class="section__header">
+          <h2>Travel</h2>
+          <p class="muted">Where to stay and how to get around.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Hotel Block</h3>
+            <p><strong>[Hotel Name]</strong> — [Distance to venue]</p>
+            <p class="muted">Use code <strong>[CODE]</strong> by <strong>[DATE]</strong>.</p>
+            <div class="card__actions">
+              <a class="btn btn--small" href="#" target="_blank" rel="noreferrer">Book Hotel</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Transportation</h3>
+            <ul class="list">
+              <li>Closest airport: <strong>Louis Armstrong New Orleans International Airport (MSY)</strong></li>
+              <li>Parking: <strong>On-site</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registry -->
+    <section class="section section--alt" id="registry">
+      <div class="container">
+        <div class="section__header">
+          <h2>Registry</h2>
+          <p class="muted">
+            Your presence is the greatest gift of all. For those who have asked, we've created a registry to help us
+            begin our next chapter together.
+          </p>
+        </div>
+
+        <div class="registry-wrapper">
+          <article class="card">
+            <h3>Wedding Registry</h3>
+            <p class="muted">
+              Browse our registry and help us build our home together.
+            </p>
+
+            <div class="card__actions">
+              <a class="btn btn--small" href="https://www.zola.com/registry/jeremiahandemma2027?preview=true" target="_blank"
+                rel="noreferrer">
+                View Registry
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section__header">
+          <h2>FAQ</h2>
+          <p class="muted">For all your questions.</p>
+        </div>
+
+        <div class="accordion card">
+          <details>
+            <summary>Can I bring a plus one?</summary>
+            <p class="muted">Plus ones will be included on invitations. While we would love to have more people come and
+              celebrate with us, this wedding is invite only.</p>
+          </details>
+          <details>
+            <summary>What time should I arrive?</summary>
+            <p class="muted">Most guests should arrive 15–30 minutes early.</p>
+          </details>
+          <details>
+            <summary>Is there parking?</summary>
+            <p class="muted">There is parking on-site.</p>
+          </details>
+          <details>
+            <summary>Are kids allowed?</summary>
+            <p class="muted">Yes but music will be PG-13</p>
+          </details>
+          <details>
+            <summary>What if I have more questions?</summary>
+            <p class="muted">Please shoot us an email at: emmajeremiahwedding@gmail.com</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="section section--alt" id="rsvp">
+      <div class="container">
+
+        <div class="section__header">
+          <h2>RSVP</h2>
+          <p class="muted">
+            Formal invitations and RSVP information will be available closer to the wedding date.
+          </p>
+        </div>
+
+        <div class="card" style="max-width: 700px; margin: 0 auto; text-align: center;">
+          <h3 style="margin-bottom: 12px;">RSVP Coming Soon</h3>
+
+          <p class="muted" style="margin-bottom: 24px;">
+            We're excited to celebrate with you! Please check back when you receive the invitation for RSVP details and
+            guest information.
+          </p>
+
+          <button class="btn" disabled>
+            RSVP Opens Soon
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="muted small">© <span id="year"></span> Emma Bouy & Jeremiah Brown. All rights reserved.</p>
+      <a class="link small" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
